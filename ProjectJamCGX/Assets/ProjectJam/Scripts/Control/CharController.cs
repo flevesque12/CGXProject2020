@@ -15,6 +15,7 @@ public class CharController : MonoBehaviour
     CharacterController m_CharacterController;
     Vector3 m_MoveDirection = Vector3.zero;
     Vector2 m_Rotation = Vector2.zero;
+    private ControllerColliderHit m_Contact;
 
     [HideInInspector]
     public bool m_CanMoveCharacter = true;
@@ -30,9 +31,15 @@ public class CharController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 movement = Vector3.zero;
+
         if (m_CharacterController.isGrounded)
         {
-            
+            Quaternion tmpQuaternion = m_PlayerCameraParent.rotation;
+            m_PlayerCameraParent.eulerAngles = new Vector3(0, m_PlayerCameraParent.eulerAngles.y, 0);
+            movement = m_PlayerCameraParent.TransformDirection(movement);
+            m_PlayerCameraParent.rotation = tmpQuaternion;
+
             Vector3 forwardDirection = transform.TransformDirection(Vector3.forward);
             Vector3 rightDirection = transform.TransformDirection(Vector3.right);
             float currentSpeedX = m_CanMoveCharacter ? m_Speed * Input.GetAxis("Vertical") : 0;
@@ -52,7 +59,7 @@ public class CharController : MonoBehaviour
 
 
         m_CharacterController.Move(m_MoveDirection * Time.deltaTime);
-
+        
         if (m_CanMoveCharacter)
         {
             m_Rotation.y += Input.GetAxis("Mouse X") * m_LookSpeed;
