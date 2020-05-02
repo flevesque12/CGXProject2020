@@ -6,8 +6,8 @@ public class ThirdPersonCamera : MonoBehaviour
 {
 
     public float m_TurnSpeed = 4.0f;
-    public float m_MinTurnAngle = -45;
-    public float m_MaxTurnAngle = 0;
+    public float m_MinTurnAngle = 1f;
+    public float m_MaxTurnAngle = 90f;
 
     public float m_MaxDistance = 10.0f;
     public float m_MinDistance = 1.5f;
@@ -18,12 +18,14 @@ public class ThirdPersonCamera : MonoBehaviour
     private float m_RotX;
     private float m_Distance;
     private float m_MouseY;
+
+    private Vector3 m_Offset;
     // Start is called before the first frame update
     void Start()
     {
         //m_Target.position = GameObject.FindGameObjectWithTag("Player").transform.position;
         m_TargetDistance = Vector3.Distance(transform.position, m_Target.position);
-        
+        m_Offset = m_Target.position - transform.position;
     }
 
     // Update is called once per frame
@@ -45,8 +47,9 @@ public class ThirdPersonCamera : MonoBehaviour
     private void LateUpdate()
     {
         //rotate the camera
-        transform.eulerAngles = new Vector3(-m_RotX, transform.eulerAngles.y + m_MouseY, 0);
-
-        transform.position = m_Target.position - (transform.forward * m_Distance);
+        //transform.eulerAngles = new Vector3(-m_RotX, transform.eulerAngles.y + m_MouseY, 0);
+        Quaternion rotation = Quaternion.Euler(-m_RotX, transform.eulerAngles.y + m_MouseY, 0f);
+        transform.position = m_Target.position - (rotation * m_Offset);
+        transform.LookAt(m_Target);
     }
 }
