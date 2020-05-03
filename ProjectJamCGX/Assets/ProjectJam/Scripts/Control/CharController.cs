@@ -35,10 +35,7 @@ public class CharController : MonoBehaviour
 
         if (m_CharacterController.isGrounded)
         {
-            Quaternion tmpQuaternion = m_PlayerCameraParent.rotation;
-            m_PlayerCameraParent.eulerAngles = new Vector3(0, m_PlayerCameraParent.eulerAngles.y, 0);
-            movement = m_PlayerCameraParent.TransformDirection(movement);
-            m_PlayerCameraParent.rotation = tmpQuaternion;
+            
 
             Vector3 forwardDirection = transform.TransformDirection(Vector3.forward);
             Vector3 rightDirection = transform.TransformDirection(Vector3.right);
