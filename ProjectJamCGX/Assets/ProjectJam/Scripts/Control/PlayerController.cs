@@ -11,7 +11,7 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public float m_InteractionRange = 1.0f;
-
+    public bool isRunning = false;
     CameraRayCaster m_CameraRayCaster;
     NavMeshAgent m_Agent;
     // Start is called before the first frame update
@@ -31,7 +31,20 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Destination");
             
         }
+        
+        if(m_Agent.remainingDistance <= m_Agent.stoppingDistance)
+        {
+            isRunning = false;
+        }
+        else
+        {
+            isRunning = true;
+        }
     }
+        
+    
+
+   
 
 
     private void Interaction()
