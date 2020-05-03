@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7913005593870661031
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: -5
+  intensityX:
+    overrideState: 1
+    value: 0.288
+  intensityY:
+    overrideState: 1
+    value: 1
+  centerX:
+    overrideState: 0
+    value: 0
+  centerY:
+    overrideState: 0
+    value: 0
+  scale:
+    overrideState: 0
+    value: 1
+--- !u!114 &-3735522218496105205
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 36.27
+  aperture:
+    overrideState: 1
+    value: 2.8
+  focalLength:
+    overrideState: 1
+    value: 270
+  kernelSize:
+    overrideState: 1
+    value: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +77,9 @@ MonoBehaviour:
   settings:
   - {fileID: 260965671278941386}
   - {fileID: 2631796804081518701}
+  - {fileID: -7913005593870661031}
+  - {fileID: 4584575014492619132}
+  - {fileID: -3735522218496105205}
 --- !u!114 &260965671278941386
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1193,7 +1258,7 @@ MonoBehaviour:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.3242424
+          value: 0.34848487
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1201,8 +1266,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.7386197
-          value: 0.56666666
+          time: 0.76798826
+          value: 0.45151514
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1216,134 +1281,134 @@ MonoBehaviour:
       m_ZeroValue: 0.5
       m_Range: 1
       cachedData:
-      - 0.3242424
-      - 0.3243232
-      - 0.3245633
-      - 0.32495922
-      - 0.32550752
-      - 0.3262048
-      - 0.32704762
-      - 0.3280325
-      - 0.32915598
-      - 0.33041468
-      - 0.33180514
-      - 0.3333239
-      - 0.3349675
-      - 0.33673254
-      - 0.33861554
-      - 0.3406131
-      - 0.34272173
-      - 0.344938
-      - 0.3472585
-      - 0.34967977
-      - 0.35219836
-      - 0.35481083
-      - 0.35751373
-      - 0.36030364
-      - 0.3631771
-      - 0.36613065
-      - 0.3691609
-      - 0.37226436
-      - 0.3754376
-      - 0.37867716
-      - 0.38197964
-      - 0.38534158
-      - 0.38875955
-      - 0.39223006
-      - 0.39574975
-      - 0.39931506
-      - 0.40292266
-      - 0.40656903
-      - 0.41025078
-      - 0.41396445
-      - 0.4177066
-      - 0.42147377
-      - 0.4252625
-      - 0.42906943
-      - 0.43289104
-      - 0.43672392
-      - 0.4405646
-      - 0.44440967
-      - 0.44825572
-      - 0.4520992
-      - 0.45593673
-      - 0.4597649
-      - 0.46358025
-      - 0.46737927
-      - 0.47115862
-      - 0.4749148
-      - 0.47864434
-      - 0.48234385
-      - 0.48600987
-      - 0.48963898
-      - 0.4932277
-      - 0.4967726
-      - 0.50027025
-      - 0.5037172
-      - 0.50711
-      - 0.5104452
-      - 0.5137194
-      - 0.5169291
-      - 0.5200709
-      - 0.5231414
-      - 0.526137
-      - 0.5290544
-      - 0.53189015
-      - 0.5346407
-      - 0.53730273
-      - 0.53987277
-      - 0.5423474
-      - 0.54472303
-      - 0.54699636
-      - 0.5491639
-      - 0.5512222
-      - 0.55316794
-      - 0.55499744
-      - 0.5567075
-      - 0.55829453
-      - 0.5597551
-      - 0.56108576
-      - 0.56228316
-      - 0.56334376
-      - 0.56426424
-      - 0.565041
-      - 0.56567067
-      - 0.56614983
-      - 0.56647503
-      - 0.56664276
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
-      - 0.56666666
+      - 0.34848487
+      - 0.34851664
+      - 0.3486111
+      - 0.3487669
+      - 0.34898275
+      - 0.3492574
+      - 0.3495895
+      - 0.34997776
+      - 0.3504209
+      - 0.35091758
+      - 0.35146654
+      - 0.35206643
+      - 0.352716
+      - 0.3534139
+      - 0.35415885
+      - 0.35494956
+      - 0.3557847
+      - 0.35666305
+      - 0.3575832
+      - 0.35854387
+      - 0.35954383
+      - 0.3605817
+      - 0.36165622
+      - 0.3627661
+      - 0.36390996
+      - 0.36508662
+      - 0.36629465
+      - 0.36753285
+      - 0.3687999
+      - 0.37009445
+      - 0.37141523
+      - 0.37276092
+      - 0.37413025
+      - 0.3755219
+      - 0.3769346
+      - 0.37836698
+      - 0.37981778
+      - 0.38128573
+      - 0.38276947
+      - 0.38426772
+      - 0.3857792
+      - 0.38730258
+      - 0.38883656
+      - 0.39037988
+      - 0.39193118
+      - 0.39348918
+      - 0.39505258
+      - 0.3966201
+      - 0.3981904
+      - 0.3997622
+      - 0.40133423
+      - 0.40290514
+      - 0.40447363
+      - 0.4060384
+      - 0.4075982
+      - 0.40915167
+      - 0.41069752
+      - 0.41223446
+      - 0.4137612
+      - 0.4152764
+      - 0.4167788
+      - 0.41826707
+      - 0.41973993
+      - 0.42119604
+      - 0.42263415
+      - 0.42405295
+      - 0.4254511
+      - 0.4268273
+      - 0.42818028
+      - 0.42950875
+      - 0.43081138
+      - 0.43208688
+      - 0.43333393
+      - 0.43455124
+      - 0.43573752
+      - 0.43689144
+      - 0.43801174
+      - 0.4390971
+      - 0.44014618
+      - 0.44115773
+      - 0.44213045
+      - 0.44306302
+      - 0.4439541
+      - 0.44480246
+      - 0.44560674
+      - 0.44636568
+      - 0.44707796
+      - 0.44774228
+      - 0.44835734
+      - 0.44892183
+      - 0.44943446
+      - 0.44989392
+      - 0.45029894
+      - 0.45064816
+      - 0.4509403
+      - 0.4511741
+      - 0.45134825
+      - 0.45146134
+      - 0.45151222
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
+      - 0.45151514
 --- !u!114 &2631796804081518701
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1362,10 +1427,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 8.93
+    value: 6.99
   threshold:
     overrideState: 1
-    value: 0.9
+    value: 0.75
   softKnee:
     overrideState: 1
     value: 0.583
@@ -1377,10 +1442,10 @@ MonoBehaviour:
     value: 10
   anamorphicRatio:
     overrideState: 1
-    value: 0.608
+    value: 0.572
   color:
     overrideState: 1
-    value: {r: 0.9221513, g: 0.72420263, b: 0.555222, a: 1}
+    value: {r: 0.98833734, g: 0.6002468, b: 0.62611943, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -1391,3 +1456,52 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &4584575014492619132
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.76
+  color:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 1
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 0
+    value: 1
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2

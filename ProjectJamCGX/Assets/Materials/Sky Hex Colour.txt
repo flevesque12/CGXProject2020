@@ -1,3 +1,7 @@
 Forest 4A008C
+	Exposure:0.75
 
 Desert 00598C
+
+Spooky: 0F001D
+	Exposure 0.11
