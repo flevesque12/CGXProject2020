@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ProjectJam/Scenes/SampleScenes/chris1.unity
+    guid: a1f93716c914a6d4d8104a883c392b7e
   m_configObjects: {}
