@@ -11,7 +11,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
     public float m_MaxDistance = 10.0f;
     public float m_MinDistance = 1.5f;
-
+    private float smoothSpeed = 5f;
     public Transform m_Target;
 
     private float m_TargetDistance;
@@ -35,7 +35,7 @@ public class ThirdPersonCamera : MonoBehaviour
         m_MouseY = Input.GetAxis("Mouse X") * m_TurnSpeed;
         m_RotX += Input.GetAxis("Mouse Y") * m_TurnSpeed;
         m_Distance -= Input.GetAxis("Mouse ScrollWheel");
-        Debug.Log(m_Distance);
+        
 
         //limit the vertical rotation and distance
         m_RotX = Mathf.Clamp(m_RotX, m_MinTurnAngle, m_MaxTurnAngle);
@@ -47,9 +47,9 @@ public class ThirdPersonCamera : MonoBehaviour
     private void LateUpdate()
     {
         //rotate the camera
-        //transform.eulerAngles = new Vector3(-m_RotX, transform.eulerAngles.y + m_MouseY, 0);
-        Quaternion rotation = Quaternion.Euler(-m_RotX, transform.eulerAngles.y + m_MouseY, 0f);
-        transform.position = m_Target.position - (rotation * m_Offset);
-        transform.LookAt(m_Target);
+        transform.eulerAngles = new Vector3(-m_RotX, transform.eulerAngles.y + m_MouseY, 0);
+        //Quaternion rotation = Quaternion.Euler(-m_RotX, transform.eulerAngles.y + m_MouseY, 0f);
+        transform.position =  Vector3.Lerp(transform.position, m_Target.position - m_Offset, smoothSpeed * Time.deltaTime);
+        transform.LookAt(m_Target.position);
     }
 }
