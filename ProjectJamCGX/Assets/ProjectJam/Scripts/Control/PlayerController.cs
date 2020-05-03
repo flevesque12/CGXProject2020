@@ -8,7 +8,7 @@ using UnityEngine.AI;
      */
 
 
-public class PlayerController : MonoBehaviour
+public class Pcchev : MonoBehaviour
 {
     public float m_InteractionRange = 1.0f;
     public bool isRunning = false;
