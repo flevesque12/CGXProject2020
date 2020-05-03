@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 66720ec01b62a054683098853d2d5ec3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Backtowonderland
+  fontNames:
+  - Backtowonderland
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2d8193ab6a9c2ef4082f3bf04f61d21b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
