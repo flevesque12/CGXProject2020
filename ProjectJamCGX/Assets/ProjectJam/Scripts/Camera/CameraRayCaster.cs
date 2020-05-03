@@ -7,7 +7,7 @@ public class CameraRayCaster : MonoBehaviour
 {
 
     private float maxRayDepth = 1000f;
-    public Layer[] layerPriorities = { Layer.Waypoint };
+    public Layer[] layerPriorities = { Layer.Waypoint, Layer.Walkable };
 
     //main camera
     private Camera viewCamera;
@@ -95,5 +95,6 @@ public enum Layer
     Layer6,
     Layer7,
     Waypoint,
+    Walkable,
     RaycastEnd = -1
 }
