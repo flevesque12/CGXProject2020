@@ -10,6 +10,7 @@ public class Director : MonoBehaviour
     public AudioSource audio;
     float timeInterval = 0f;
     public Image titlescreen;
+    public GameObject character;
     private void Update()
     {
 
@@ -20,6 +21,8 @@ public class Director : MonoBehaviour
                 StartCoroutine(FadeImage(true));
                 cam.GetComponent<CameraControllerSmooth>().enabled = true;
                 isSplashScreen = false;
+                character.SetActive(true);
+
             }
         }
 
